@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(pins/R.gif);
+    --bg-color: color-mix(in srgb, #f62 70%, #fff);
+    --dark-color: #f62;
+    --chat-bg-color: #fff;
+    height: 200dvh;
+    background-size: cover;
+    background-position: center;
+}
+body,div,ul,li,a,h1,h2.h3,h4,p{
+    margin: 0%;
+    padding: 0%; 
+}
+header{
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+}
+.text-container{
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: clamp(1rem, 8vw, 10rem);
+    color: #444;
+    mix-blend-mode: difference;
+    font-weight: 700;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 3vw;
+    animation: aparecer-texto both;
+    animation-timeline: scroll();
+    animation-range-start: cover 20%;
+}
+.left-text{
+    padding-left: 4vw;
+}
+img{
+    filter: grayscale();
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 0%;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    height: 100vh;
+    mix-blend-mode: darken;
+}
+@keyframes aparecer{
+    0%{
+      opacity: 0;
+
+      filter: grayscale();
+      translate: 0 -20%;
+      scale: 1.2;
+    }
+    100%{
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+}
+
+@keyframes aparecer-texto{
+    0%{
+      opacity: 0;
+      translate: 0 -20%;
+      scale: .8;
+    }
+    100%{
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+}
