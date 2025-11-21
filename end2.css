@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 body{
     background-image: url(pins/R.gif);
@@ -75,4 +75,5 @@ img{
       translate: 0 0;
       scale: 1;
     }
+
 }
